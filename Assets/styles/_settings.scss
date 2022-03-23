@@ -9,11 +9,57 @@
 
 $font1: "font1", sans-serif;
 $font2: "font2", sans-serif;
+$color1: rgb(252, 248, 248);
+$color2: rgb(175, 175, 175);
+$color3: rgb(10, 10, 10);
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  scroll-behavior: smooth;
+  outline: none;
+  box-sizing: border-box;
+  font-family: $font1;
+  color: $color3;
+}
+
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: $color1;
+}
+
+h2 {
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+p {
+  font-family: $font2;
+  font-style: italic;
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+}
 
 body {
   background-image: url(../images/bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
+  text-align: center;
 }

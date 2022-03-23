@@ -1,0 +1,31 @@
+header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        width: 55%;
+        margin: 0 auto 50px;
+    }
+    p {
+        color: $color1;
+        margin-bottom: 50px;
+    }
+    i {
+        color: $color1;
+        font-size: 1.3rem;
+        border: 2px solid $color1;
+        padding: 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        position: relative;
+        transition: 0.4s ease-in-out;
+        &:hover {
+            color: $color2;
+            opacity: 30%;
+            background: $color1;
+            border: 2px solid $color2;
+        }
+    }
+}
