@@ -2,8 +2,10 @@ header {
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     h1 {
         width: 55%;
         margin: 0 auto 50px;
@@ -12,7 +14,7 @@ header {
         color: $color1;
         margin-bottom: 50px;
     }
-    i {
+    .header-icon i {
         color: $color1;
         font-size: 1.3rem;
         border: 2px solid $color1;
@@ -22,10 +24,49 @@ header {
         position: relative;
         transition: 0.4s ease-in-out;
         &:hover {
-            color: $color2;
-            opacity: 30%;
-            background: $color1;
-            border: 2px solid $color2;
+            transform: scale(1.1);
+            background-color: $color2o;
+        }
+    }
+    nav {
+        height: 100px;
+        width: 85%;
+        background-color: $color2o;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                color: $color1;
+                text-transform: uppercase;
+                padding: 0 15px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                font-size: 0.8rem;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                i {
+                    color: $color1;
+                    font-size: 1.4rem;
+                    margin: 10px;
+                }
+            }
+            .pages {
+                &:hover {
+                    background-color: $color2;
+                    color: $color3;
+                }
+            }
+            .icon, a {
+                transition: 0.3s ease-in-out;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
         }
     }
 }

@@ -66,12 +66,17 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 header h1 {
@@ -84,7 +89,7 @@ header p {
   margin-bottom: 50px;
 }
 
-header i {
+header .header-icon i {
   color: #fcf8f8;
   font-size: 1.3rem;
   border: 2px solid #fcf8f8;
@@ -96,10 +101,69 @@ header i {
   transition: 0.4s ease-in-out;
 }
 
-header i:hover {
-  color: #afafaf;
-  opacity: 30%;
-  background: #fcf8f8;
-  border: 2px solid #afafaf;
+header .header-icon i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: rgba(228, 228, 228, 0.205);
+}
+
+header nav {
+  height: 100px;
+  width: 85%;
+  background-color: rgba(228, 228, 228, 0.205);
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li {
+  color: #fcf8f8;
+  text-transform: uppercase;
+  padding: 0 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li i {
+  color: #fcf8f8;
+  font-size: 1.4rem;
+  margin: 10px;
+}
+
+header nav ul .pages:hover {
+  background-color: #e4e4e4;
+  color: #0a0a0a;
+}
+
+header nav ul .icon, header nav ul a {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+header nav ul .icon:hover, header nav ul a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=index.css.map */
