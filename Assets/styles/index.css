@@ -20,16 +20,24 @@
   color: #0a0a0a;
 }
 
+body {
+  background-image: url(../images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 2px;
   color: #fcf8f8;
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 2px;
@@ -45,19 +53,11 @@ h3 {
 p {
   font-family: "font2", sans-serif;
   font-style: italic;
-  line-height: 30px;
+  line-height: 35px;
 }
 
 a {
   text-decoration: none;
-}
-
-body {
-  background-image: url(../images/bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  text-align: center;
 }
 
 header {
@@ -165,5 +165,50 @@ header nav ul .icon, header nav ul a {
 header nav ul .icon:hover, header nav ul a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.section1 {
+  background: #fcf8f8;
+  width: 85%;
+  margin: 0 auto;
+  padding: 80px;
+}
+
+.section1 h4 {
+  font-family: "font2", sans-serif;
+  font-weight: 200;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.section1 h4::before {
+  content: "";
+  height: 1px;
+  width: 35%;
+  position: absolute;
+  background-color: #e4e4e4;
+  left: 0;
+  top: 50%;
+}
+
+.section1 h4::after {
+  content: "";
+  height: 1px;
+  width: 35%;
+  position: absolute;
+  background-color: #e4e4e4;
+  right: 0;
+  top: 50%;
+}
+
+.section1 h2 {
+  margin: 80px auto 50px;
+  width: 60%;
+  text-align: center;
+}
+
+.section1 p {
+  width: 60%;
+  margin: 0 auto 50px;
 }
 /*# sourceMappingURL=index.css.map */
