@@ -1,0 +1,44 @@
+footer {
+  background: $color1;
+  width: 85%;
+  margin: 0 auto 80px;
+  border-bottom: 1px solid $color2;
+  display: flex;
+  .footer-leftPart {
+    width: 100%;
+    border-right: 1px solid $color2;
+    padding: 30px;
+    form {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: 
+      "formName"
+      "formEmail"
+      "formTA";
+    }
+    .formName {
+      grid-area: formName;
+    }
+    .formEmail {
+      grid-area: formEmail;
+    }
+    .formTA {
+      grid-area: formTA;
+    }
+  }
+  .footer-rightPart {
+    width: 100%;
+    display: grid;
+    grid-template-row: 25% 25% 25% 25%;
+    div {
+      display: grid;
+      grid-template-columns: 30% 70%;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+}
