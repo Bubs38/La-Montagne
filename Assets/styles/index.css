@@ -60,6 +60,17 @@ a {
   text-decoration: none;
 }
 
+button {
+  text-transform: uppercase;
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid #0a0a0a;
+  font-weight: bolder;
+  font-size: 0.70rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
 header {
   height: 100vh;
   width: 100%;
@@ -152,6 +163,11 @@ header nav ul li i {
   margin: 10px;
 }
 
+header nav ul .pages {
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
 header nav ul .pages:hover {
   background-color: #e4e4e4;
   color: #0a0a0a;
@@ -172,6 +188,7 @@ header nav ul .icon:hover, header nav ul a:hover {
   width: 85%;
   margin: 0 auto;
   padding: 80px;
+  border-bottom: 1px solid #e4e4e4;
 }
 
 .section1 h4 {
@@ -203,12 +220,67 @@ header nav ul .icon:hover, header nav ul a:hover {
 
 .section1 h2 {
   margin: 80px auto 50px;
-  width: 60%;
+  width: 63%;
   text-align: center;
 }
 
 .section1 p {
   width: 60%;
   margin: 0 auto 50px;
+}
+
+.section1 .section1-imgContainer {
+  width: 90%;
+  margin: 0 auto 50px;
+}
+
+.section1 .section1-imgContainer img {
+  width: 100%;
+}
+
+.section2 {
+  background: #fcf8f8;
+  width: 85%;
+  margin: 0 auto 40px;
+  border-bottom: 1px solid #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section2 .section2-leftPart {
+  padding: 50px 80px;
+  border-right: 1px solid #e4e4e4;
+}
+
+.section2 .section2-rightPart {
+  padding: 50px 80px;
+}
+
+.section2 h6 {
+  font-size: 0.8rem;
+  font-family: "font2", sans-serif;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.section2 h3 {
+  width: 50%;
+  margin: 0 auto 20px;
+  font-weight: 900;
+  line-height: 35px;
+  font-size: 1.6rem;
+}
+
+.section2 img {
+  width: 100%;
+}
+
+.section2 p {
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 200;
+  text-align: left;
+  margin: 20px 0;
 }
 /*# sourceMappingURL=index.css.map */

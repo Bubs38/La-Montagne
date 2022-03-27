@@ -56,6 +56,7 @@ header {
                 }
             }
             .pages {
+                transition: 1s ease-out;
                 &:hover {
                     background-color: $color2;
                     color: $color3;
