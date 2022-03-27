@@ -1,6 +1,6 @@
 @font-face {
   font-family: "font1";
-  src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+  src: url(../fonts/Inter-ExtraBold.ttf);
 }
 
 @font-face {
@@ -60,7 +60,7 @@ a {
   text-decoration: none;
 }
 
-button {
+.button {
   text-transform: uppercase;
   padding: 10px 30px;
   background-color: transparent;
@@ -297,17 +297,68 @@ footer {
 footer .footer-leftPart {
   width: 100%;
   border-right: 1px solid #e4e4e4;
-  padding: 30px;
+  padding: 50px 30px;
 }
 
 footer .footer-leftPart form {
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas: "formName" "formEmail" "formTA";
+  -ms-grid-rows: 15% 15% 50% 20%;
+      grid-template-rows: 15% 15% 50% 20%;
+      grid-template-areas: "formName" "formEmail" "formTA" "formButton";
+}
+
+footer .footer-leftPart form label {
+  display: inline-block;
+  margin: 20px 0;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+footer .footer-leftPart form #name, footer .footer-leftPart form #email {
+  width: 100%;
+  height: 50px;
+  margin: 20px 0;
+  background: transparent;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+footer .footer-leftPart form #name:focus, footer .footer-leftPart form #email:focus {
+  border: 1px solid #0a0a0a;
+}
+
+footer .footer-leftPart form .formButton {
+  text-align: left;
+  margin: auto 15px;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: formButton;
+}
+
+footer .footer-leftPart form textarea {
+  width: 100%;
+  height: 150px;
+  background: transparent;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  resize: none;
+}
+
+footer .footer-leftPart form textarea:focus {
+  border: 1px solid #0a0a0a;
 }
 
 footer .footer-leftPart .formName {
@@ -332,7 +383,8 @@ footer .footer-rightPart {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  grid-template-row: 25% 25% 25% 25%;
+  -ms-grid-rows: 25% 25% 25% 25%;
+      grid-template-rows: 25% 25% 25% 25%;
 }
 
 footer .footer-rightPart div {
@@ -340,16 +392,45 @@ footer .footer-rightPart div {
   display: grid;
   -ms-grid-columns: 30% 70%;
       grid-template-columns: 30% 70%;
+  text-align: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+  border-bottom: 1px solid #e4e4e4;
 }
 
-footer .footer-rightPart ul {
+footer .footer-rightPart div h5 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+footer .footer-rightPart div p {
+  font-style: normal;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+footer .footer-rightPart div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 33% 0 i;
+  margin-border: 1px solid #e4e4e4;
+  margin-border-radius: 50px;
+  margin-padding: 15px;
+  margin-cursor: pointer;
+}
+
+footer .footer-rightPart .lastdiv {
+  border-bottom: none;
 }
 /*# sourceMappingURL=index.css.map */

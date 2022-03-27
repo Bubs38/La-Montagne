@@ -1,6 +1,6 @@
 @font-face {
   font-family: "font1";
-  src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+  src: url(../fonts/Inter-ExtraBold.ttf);
 }
 @font-face {
   font-family: "font2";
@@ -67,7 +67,7 @@ a {
   text-decoration: none;
 }
 
-button {
+.button {
   text-transform: uppercase;
   padding: 10px 30px;
   background-color: transparent;
