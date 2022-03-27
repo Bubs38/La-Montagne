@@ -8,72 +8,70 @@
 }
 
 $font1: "font1", sans-serif;
-$font2: "font2", sans-serif;
-$color1: rgb(252, 248, 248);
-$color2: rgb(228, 228, 228);
-$color3: rgb(10, 10, 10);
-$color1o: rgb(252, 248, 248);
-$color2o: rgba(228, 228, 228, 0.205);
-$color3o: rgb(10, 10, 10);
+$font2: "font2", serif;
+$black1: rgb(17,17,17);
+$white1: rgb(243,243,243);
+
+$grey1: rgb(212, 209, 209) ;
+$grey2: rgb(233,233,233);
+$grey3: rgb(105,105,105);
+
+@mixin title {
+  font-family: $font1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
 *{
   margin: 0;
   padding: 0;
-  list-style: none;
-  scroll-behavior: smooth;
-  outline: none;
   box-sizing: border-box;
-  font-family: $font1;
-  color: $color3;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  color: $white1;
+}
 body {
-  background-image: url(../images/bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: url(../images/bg.jpg) fixed center/cover;
   text-align: center;
-}
-
-h1 {
-  font-size: 5rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 2px;
-  color: $color1;
-}
-
-h2 {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-h3 {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-p {
   font-family: $font2;
-  font-style: italic;
-  line-height: 35px;
-}
+  max-width: 1300px;
+  margin: 0 auto;
 
-a {
-  text-decoration: none;
-}
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: $black1;
+    animation: animBefore 1.5s ease forwards;
+    animation-delay: 0.15s;
 
+    @keyframes animBefore {
+      to {
+        opacity: 0;
+      }
+    }
+  }
+}
 .button {
-  text-transform: uppercase;
-  padding: 10px 30px;
-  background-color: transparent;
-  border: 2px solid $color3;
-  font-weight: bolder;
-  font-size: 0.70rem;
-  letter-spacing: 2px;
+  background: transparent;
+  border: 2px solid $black1;
+  height: 45px;
+  width: 170px;
+  font-size: 0.75rem;
   cursor: pointer;
+  @include title;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.05);
+  }
 }

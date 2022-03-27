@@ -1,111 +1,94 @@
 footer {
-  background: $color1;
+  background: $grey2;
+  min-height: 640px;
   width: 85%;
-  margin: 0 auto 80px;
-  border-bottom: 1px solid $color2;
-  display: flex;
-  .footer-leftPart {
-    width: 100%;
-    border-right: 1px solid $color2;
-    padding: 50px 30px;
-    form {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 15% 15% 50% 20%;
-      grid-template-areas: 
-      "formName"
-      "formEmail"
-      "formTA"
-      "formButton";
-      label {
-        display: inline-block;
-        margin: 20px 0;
-        text-align: left;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        font-weight: bolder;
-        letter-spacing: 1px;
-      }
-      #name, #email{
-        width: 100%;
-        height: 50px;
-        margin: 20px 0;
-        background: transparent;
-        border: 1px solid $color2;
-        border-radius: 5px;
-        padding: 10px;
-        transition: 0.4s ease-in-out;
-        &:focus {
-          border: 1px solid $color3;
-        }
-      }
-      .formButton {
-        text-align: left;
-        margin: auto 15px;
-        grid-area: formButton;
-      }
-      textarea {
-        width: 100%;
-        height: 150px;
-        background: transparent;
-        border: 1px solid $color2;
-        border-radius: 5px;
-        padding: 10px;
-        transition: 0.4s ease-in-out;
-        resize: none;
-        &:focus {
-          border: 1px solid $color3;
-        }
-      }
+  margin: 0 auto 70px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+  form {
+    display: grid;
+    gap: 18px;
+    padding: 60px 50px;
+    grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
+    label {
+      display: flex;
+      align-items: flex-end;
+      @include title;
+      font-size: 0.7rem;
+      color: $grey3;
     }
-    .formName {
-      grid-area: formName;
+    input[type="text"], textarea {
+      background: none;
+      border-radius: 4px;
+      border: 1px solid $grey1;
+      resize: none;
     }
-    .formEmail {
-      grid-area: formEmail;
-    }
-    .formTA {
-      grid-area: formTA;
+    .submit-container {
+      display: flex;
+      align-items: flex-end;
+      .button {
+        color: $grey3;
+        border: 1px solid $grey3;
+      }
     }
   }
-  .footer-rightPart {
-    width: 100%;
+  .infos-contact {
+    border-left: 1px solid $grey1;
     display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-    div {
-      display: grid;
-      grid-template-columns: 30% 70%;
-      text-align: left;
-      align-items: center;
-      padding: 50px;
-      border-bottom: 1px solid $color2;
-      h5 {
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        font-weight: bolder;
-        letter-spacing: 1px;
-      }
-      p {
-        font-style: normal;
-        font-weight: 100;
-        font-size: 0.9rem;
-      }
-      ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        margin: 0 33% 0 
-        i {
-          border: 1px solid $color2;
-          border-radius: 50px;
-          padding: 15px;
-          cursor: pointer;
-        }
+    grid-template-rows: repeat(4, 1fr);
+    div:nth-child(1) {
+      @media screen and (max-width: 700px) {
+        border: 1px solid $grey1;
       }
     }
-    .lastdiv {
-        border-bottom: none;
+    div {
+      border-bottom: 1px solid $grey1;
+      display: grid;
+      grid-template-columns: 30% 70%;
+      align-items: center;
+      @media screen and (max-width: 900px) {
+        grid-template-columns: 45% 55%;
+        padding: 25px 0;
+      }
+      h3 {
+        @include title;
+        font-size: 0.7rem;
+        padding-left: 40px;
+        text-align: left;
+        color: $grey3;
+      }
+      p {
+        font-size: 0.8rem;
+        line-height: 26px;
+        text-align: left;
+        color: grey;
+      }
+    }
+    .social {
+      ul{
+        display: flex;
+        li {
+          border: 1px solid $grey1;
+          border-radius: 150px;
+          height: 40px;
+          width: 40px;
+          font-size: 0.9rem;
+          margin-right: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+        a, a:visited {
+          color: $grey3;
+        } 
+      }
     }
   }
 }
